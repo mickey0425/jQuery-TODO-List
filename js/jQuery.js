@@ -41,6 +41,9 @@ $(document).ready(function() {
   function editItem() {
 
     var createInput = $('<input>');
+    //console.log($(this).prev().text())
+    createInput.val($(this).prev().text());
+
     $(this).parent().append(createInput);
     createInput.focus();
     createInput.on('blur', function() {
